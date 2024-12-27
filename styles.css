@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/YASHGHONE.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.content-wrapper {
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.left-section {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.name {
+    font-size: 4rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+.nav-menu {
+    flex: 0 0 200px;
+}
+
+.nav-menu ul {
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-bottom: 20px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .left-section {
+        padding-right: 0;
+        margin-bottom: 50px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .nav-menu {
+        width: 100%;
+    }
+
+    .name {
+        font-size: 3rem;
+    }
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}

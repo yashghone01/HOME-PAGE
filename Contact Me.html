@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    #background-video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 100vh;
+      height: 100vh;
+      width: 100%;
+      height: 100%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    /* ... (rest of your icon CSS) */
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      color: white;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+
+    .contact-icon:hover {
+      transform: scale(1.1);
+    }
+
+    .gmail {
+      background-color: #D44638;
+    }
+
+    .linkedin {
+      background-color: #0077B5;
+    }
+
+    .whatsapp {
+      background-color: #25D366;
+    }
+
+    h1 {
+      text-align: center;
+      animation: text-animation 3s ease-in-out infinite alternate;
+      /* Change the font family and size here */
+      font-family: cursive; /* Example cursive font */
+      font-size: 3em;
+    }
+
+    @keyframes text-animation {
+      0% {
+        color: #e62e2e;
+      }
+      50% {
+        color: #f1c40f;
+      }
+      100% {
+        color: #3498db;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <video autoplay muted loop id="background-video">
+    <source src="Contact Me.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="content">
+    <h1 class="animated-text">Contact Me</h1>
+    <div class="contact-links">
+      <a href="mailto:yashghone2004@gmail.com" target="_blank">
+        <div class="contact-icon gmail">
+          <i class="fas fa-envelope"></i>
+        </div>
+      </a>
+      <a href="https://www.linkedin.com/in/yash-ghone/" target="_blank">
+        <div class="contact-icon linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </div>
+      </a>
+      <a href="https://wa.me/7744074415" target="_blank">
+        <div class="contact-icon whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/e0c6d33f37.js" crossorigin="anonymous
+</body>
+</html>

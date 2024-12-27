@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More About Me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cinzel', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto; /* Important: Maintain aspect ratio */
+            height: auto; /* Important: Maintain aspect ratio */
+            z-index: -1;
+            object-fit: cover; /* Cover the entire viewport */
+        }
+
+        /* Media queries for responsiveness */
+        @media only screen and (max-width: 768px) {
+            #background-video {
+                width: auto;
+                height: auto;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            #background-video {
+                width: 100vw;
+                height: 100vh;
+            }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        h1, h2 {
+            color: #2a2a2a;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 20px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 5px;
+        }
+
+        p {
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 5px 0;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <video autoplay muted loop id="background-video">
+        <source src="More about me.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <div class="container">
+       <h1>More About Me</h1>
+
+        <p>Hello! I'm <strong>Yash Naresh Ghone</strong>, a passionate tech enthusiast with a deep interest in <strong>cybersecurity</strong>, <strong>SEO</strong>, and <strong>web development</strong>. My journey in technology began with a curiosity to understand how systems work, combined with a drive to solve complex problems and optimize online experiences. Over time, I’ve honed my skills through hands-on projects, internship, and certifications.</p>
+
+        <h2>Professional Highlights</h2>
+        <ul>
+            <li><strong>Cybersecurity Experience:</strong> I worked with tools like <strong>Wireshark</strong>, <strong>Metasploitable 2</strong>, and <strong>Nessus</strong> to identify vulnerabilities and enhance system security.</li>
+            <li><strong>SEO Expertise:</strong> Completed internship at <strong>Trivium Media Group</strong> learned to leverage my SEO skills, focusing on increasing organic traffic, keyword optimization, and content strategy.</li>
+            <li><strong>Web Development:</strong> I developed dynamic websites using <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and <strong>PHP</strong>, focusing on user experience and performance optimization.</li>
+            <li><strong>Ethical Hacking & Penetration Testing:</strong> Completed a course in <strong>Ethical Hacking</strong> where I learned penetration testing techniques, including using <strong>Burp Suite</strong> and <strong>OWASP ZAP</strong> to assess and enhance website security.</li>
+        </ul>
+
+        <h2>Hobbies and Interests</h2>
+        <p>Beyond my professional pursuits, I enjoy:</p>
+        <ul>
+            <li><strong>SEO Content Creation:</strong> Experimenting with SEO techniques to optimize online content and improve rankings for personal or client websites.</li>
+            <li><strong>Web Development Projects:</strong> Building personal websites and web apps, focusing on <strong>front-end development</strong> and user-centric design.</li>
+            <li><strong>Cybersecurity Research:</strong> Constantly exploring the latest trends in <strong>ethical hacking</strong>, <strong>network security</strong>, and digital privacy, and applying them to real-world scenarios.</li>
+            <li>Creating engaging <strong>Instagram content</strong> for my page <strong>'BLUE.FEELS_'</strong>, where I combine my passion for tech and creativity.</li>
+        </ul>
+
+        <h2>Core Values and Goals</h2>
+        <p>I believe in <strong>continuous learning</strong>, <strong>ethical practices</strong>, and making technology accessible and secure for everyone. My goal is to become a full-stack developer while specializing in <strong>cybersecurity</strong> and <strong>SEO</strong>, ensuring the protection and optimization of digital platforms.</p>
+
+        <h2>Fun Facts</h2>
+        <ul>
+            <li>I'm comfortable explaining technical concepts in <strong>Hindi</strong>, making complex cybersecurity or web development ideas simple for diverse audiences.</li>
+            <li>I enjoy combining my skills in <strong>web development</strong> and <strong>SEO</strong> to help websites rank higher while ensuring they're secure and user-friendly.</li>
+        </ul>
+
+        <h2>Motto</h2>
+        <p><em>"The best way to predict the future is to create it." – Abraham Lincoln</em></p>
+    </div>
+
+</body>
+</html>
