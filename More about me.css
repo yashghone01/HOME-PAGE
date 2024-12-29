@@ -20,20 +20,6 @@ body {
     object-fit: cover;
 }
 
-@media only screen and (max-width: 768px) {
-    #background-video {
-        width: auto;
-        height: auto;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    #background-video {
-        width: 100vw;
-        height: 100vh;
-    }
-}
-
 .container {
     max-width: 800px;
     margin: 100px auto;
@@ -82,4 +68,133 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Large Desktop Screens */
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1000px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Tablets and Small Laptops */
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+        margin: 60px auto;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 40px auto;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    #background-video {
+        width: auto;
+        height: auto;
+    }
+}
+
+/* Large Mobile Phones */
+@media screen and (max-width: 576px) {
+    .container {
+        margin: 20px auto;
+        padding: 15px;
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        margin-top: 15px;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Small Mobile Phones */
+@media screen and (max-width: 375px) {
+    .container {
+        margin: 10px auto;
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Handle text overflow on small screens */
+@media screen and (max-width: 480px) {
+    h1, h2, p {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+}
+
+/* Fix for background video on mobile devices */
+@media (hover: none) and (pointer: coarse) {
+    #background-video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* Print styles */
+@media print {
+    #background-video {
+        display: none;
+    }
+
+    .container {
+        box-shadow: none;
+        margin: 0;
+        max-width: 100%;
+    }
 }

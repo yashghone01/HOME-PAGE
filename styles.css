@@ -7,6 +7,7 @@
 
 body {
     background-color: #f7f7f7;
+    overflow-x: hidden;
 }
 
 .container {
@@ -16,6 +17,7 @@ body {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/YASHGHONE.jpg');
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 
 .content-wrapper {
@@ -100,31 +102,6 @@ body {
     width: 100%;
 }
 
-@media (max-width: 768px) {
-    .content-wrapper {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px;
-    }
-
-    .left-section {
-        padding-right: 0;
-        margin-bottom: 50px;
-    }
-
-    .social-icons {
-        justify-content: center;
-    }
-
-    .nav-menu {
-        width: 100%;
-    }
-
-    .name {
-        font-size: 3rem;
-    }
-}
-
 .mobile-menu-btn {
     display: none;
     background: none;
@@ -133,13 +110,164 @@ body {
     font-size: 24px;
     cursor: pointer;
     padding: 10px;
+    z-index: 100;
 }
 
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    .name {
+        font-size: 3.5rem;
+    }
+    
+    .description {
+        font-size: 1.1rem;
+        max-width: 500px;
+    }
+    
+    .content-wrapper {
+        padding: 40px;
+    }
+    
+    .left-section {
+        padding-right: 30px;
+    }
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+        padding-top: 80px;
+    }
+
+    .left-section {
+        padding-right: 0;
+        margin-bottom: 50px;
+    }
+
+    .name {
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+    }
+
+    .description {
+        font-size: 1rem;
+        margin-bottom: 30px;
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .social-icons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-menu {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 80px 40px;
+        transition: right 0.3s ease;
+        z-index: 99;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu ul {
+        text-align: center;
+    }
+
+    .nav-menu li {
+        margin-bottom: 30px;
+    }
+
     .mobile-menu-btn {
         display: block;
-        position: absolute;
+        position: fixed;
         top: 20px;
         right: 20px;
+    }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+    .content-wrapper {
+        padding: 20px;
+        padding-top: 70px;
+    }
+
+    .name {
+        font-size: 2.2rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+    }
+
+    .nav-menu {
+        padding: 60px 20px;
+    }
+
+    .nav-menu a {
+        font-size: 1rem;
+    }
+}
+
+/* Landscape Mode Styles */
+@media (max-height: 600px) and (orientation: landscape) {
+    .content-wrapper {
+        padding: 20px 40px;
+    }
+
+    .name {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .description {
+        margin-bottom: 20px;
+    }
+
+    .nav-menu li {
+        margin-bottom: 15px;
+    }
+}
+
+/* High-resolution Screens */
+@media (min-width: 1440px) {
+    .name {
+        font-size: 5rem;
+    }
+
+    .description {
+        font-size: 1.4rem;
+        max-width: 800px;
+    }
+
+    .nav-menu a {
+        font-size: 1.4rem;
+    }
+}
+
+/* Support for Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
     }
 }

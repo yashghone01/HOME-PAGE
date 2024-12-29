@@ -1,52 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>More About Me</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="More about me.css"> </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about Yash Naresh Ghone - Cybersecurity enthusiast, SEO specialist, and web developer">
+    <meta name="theme-color" content="#f4f4f4">
+    
+    <!-- Preload video and font -->
+    <link rel="preload" as="video" href="More about me.mp4" type="video/mp4">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="More about me.css">
+    
+    <title>More About Me | Yash Ghone</title>
+</head>
 <body>
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline id="background-video">
+        <source src="More about me.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
 
-  <video autoplay muted loop id="background-video">
-    <source src="More about me.mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
-  </video>
+    <main class="container">
+        <header>
+            <h1>More About Me</h1>
+        </header>
 
-  <div class="container">
-    <h1>More About Me</h1>
+        <section class="introduction">
+            <p>Hello! I'm <strong>Yash Naresh Ghone</strong>, a passionate tech enthusiast with a deep interest in <strong>cybersecurity</strong>, <strong>SEO</strong>, and <strong>web development</strong>. My journey in technology began with a curiosity to understand how systems work, combined with a drive to solve complex problems and optimize online experiences. Over time, I've honed my skills through hands-on projects, internship, and certifications.</p>
+        </section>
 
-    <p>Hello! I'm <strong>Yash Naresh Ghone</strong>, a passionate tech enthusiast with a deep interest in <strong>cybersecurity</strong>, <strong>SEO</strong>, and <strong>web development</strong>. My journey in technology began with a curiosity to understand how systems work, combined with a drive to solve complex problems and optimize online experiences. Over time, I’ve honed my skills through hands-on projects, internship, and certifications.</p>
+        <section class="professional-highlights">
+            <h2>Professional Highlights</h2>
+            <ul>
+                <li><strong>Cybersecurity Experience:</strong> I worked with tools like <strong>Wireshark</strong>, <strong>Metasploitable 2</strong>, and <strong>Nessus</strong> to identify vulnerabilities and enhance system security.</li>
+                <li><strong>SEO Expertise:</strong> Completed internship at <strong>Trivium Media Group</strong> learned to leverage my SEO skills, focusing on increasing organic traffic, keyword optimization, and content strategy.</li>
+                <li><strong>Web Development:</strong> I developed dynamic websites using <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and <strong>PHP</strong>, focusing on user experience and performance optimization.</li>
+                <li><strong>Ethical Hacking & Penetration Testing:</strong> Completed a course in <strong>Ethical Hacking</strong> where I learned penetration testing techniques, including using <strong>Burp Suite</strong> and <strong>OWASP ZAP</strong> to assess and enhance website security.</li>
+            </ul>
+        </section>
 
-    <h2>Professional Highlights</h2>
-    <ul>
-      <li><strong>Cybersecurity Experience:</strong> I worked with tools like <strong>Wireshark</strong>, <strong>Metasploitable 2</strong>, and <strong>Nessus</strong> to identify vulnerabilities and enhance system security.</li>
-      <li><strong>SEO Expertise:</strong> Completed internship at <strong>Trivium Media Group</strong> learned to leverage my SEO skills, focusing on increasing organic traffic, keyword optimization, and content strategy.</li>
-      <li><strong>Web Development:</strong> I developed dynamic websites using <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and <strong>PHP</strong>, focusing on user experience and performance optimization.</li>
-      <li><strong>Ethical Hacking & Penetration Testing:</strong> Completed a course in <strong>Ethical Hacking</strong> where I learned penetration testing techniques, including using <strong>Burp Suite</strong> and <strong>OWASP ZAP</strong> to assess and enhance website security.</li>
-    </ul>
+        <section class="hobbies">
+            <h2>Hobbies and Interests</h2>
+            <p>Beyond my professional pursuits, I enjoy:</p>
+            <ul>
+                <li><strong>SEO Content Creation:</strong> Experimenting with SEO techniques to optimize online content and improve rankings for personal or client websites.</li>
+                <li><strong>Web Development Projects:</strong> Building personal websites and web apps, focusing on <strong>front-end development</strong> and user-centric design.</li>
+                <li><strong>Cybersecurity Research:</strong> Constantly exploring the latest trends in <strong>ethical hacking</strong>, <strong>network security</strong>, and digital privacy, and applying them to real-world scenarios.</li>
+                <li>Creating engaging <strong>Instagram content</strong> for my page <strong>'BLUE.FEELS_'</strong>, where I combine my passion for tech and creativity.</li>
+            </ul>
+        </section>
 
-    <h2>Hobbies and Interests</h2>
-    <p>Beyond my professional pursuits, I enjoy:</p>
-    <ul>
-      <li><strong>SEO Content Creation:</strong> Experimenting with SEO techniques to optimize online content and improve rankings for personal or client websites.</li>
-      <li><strong>Web Development Projects:</strong> Building personal websites and web apps, focusing on <strong>front-end development</strong> and user-centric design.</li>
-      <li><strong>Cybersecurity Research:</strong> Constantly exploring the latest trends in <strong>ethical hacking</strong>, <strong>network security</strong>, and digital privacy, and applying them to real-world scenarios.</li>
-      <li>Creating engaging <strong>Instagram content</strong> for my page <strong>'BLUE.FEELS_'</strong>, where I combine my passion for tech and creativity.</li>
-    </ul>
+        <section class="values">
+            <h2>Core Values and Goals</h2>
+            <p>I believe in <strong>continuous learning</strong>, <strong>ethical practices</strong>, and making technology accessible and secure for everyone. My goal is to become a full-stack developer while specializing in <strong>cybersecurity</strong> and <strong>SEO</strong>, ensuring the protection and optimization of digital platforms.</p>
+        </section>
 
-    <h2>Core Values and Goals</h2>
-    <p>I believe in <strong>continuous learning</strong>, <strong>ethical practices</strong>, and making technology accessible and secure for everyone. My goal is to become a full-stack developer while specializing in <strong>cybersecurity</strong> and <strong>SEO</strong>, ensuring the protection and optimization of digital platforms.</p>
+        <section class="fun-facts">
+            <h2>Fun Facts</h2>
+            <ul>
+                <li>I'm comfortable explaining technical concepts in <strong>Hindi</strong>, making complex cybersecurity or web development ideas simple for diverse audiences.</li>
+                <li>I enjoy combining my skills in <strong>web development</strong> and <strong>SEO</strong> to help websites rank higher while ensuring they're secure and user-friendly.</li>
+            </ul>
+        </section>
 
-    <h2>Fun Facts</h2>
-    <ul>
-      <li>I'm comfortable explaining technical concepts in <strong>Hindi</strong>, making complex cybersecurity or web development ideas simple for diverse audiences.</li>
-      <li>I enjoy combining my skills in <strong>web development</strong> and <strong>SEO</strong> to help websites rank higher while ensuring they're secure and user-friendly.</li>
-    </ul>
+        <section class="motto">
+            <h2>Motto</h2>
+            <p><em>"The best way to predict the future is to create it." – Abraham Lincoln</em></p>
+        </section>
+    </main>
 
-    <h2>Motto</h2>
-    <p><em>"The best way to predict the future is to create it." – Abraham Lincoln</em></p>
-  </div>
-
+    <!-- Optional: Add a noscript fallback -->
+    <noscript>
+        <div style="text-align: center; padding: 20px;">
+            Please enable JavaScript to view this page properly.
+        </div>
+    </noscript>
 </body>
 </html>

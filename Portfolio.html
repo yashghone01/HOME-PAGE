@@ -1,44 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yash Ghone - Web Developer & SEO Analyst</title>
-  <link rel="stylesheet" href="Portfolio.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Yash Ghone - Web Developer & SEO Analyst</title>
+    <link rel="stylesheet" href="Portfolio.css">
 </head>
 <body>
-  <div class="background-blobs">
-    <img id="blob-image" src="blob-background.png" alt="Background Blobs">
-  </div>
-  <div class="content">
-    <h1>Hey! I am Yash Ghone.</h1> 
-    <h2>Web Developer, SEO Analyst & Cyber Security Analyst</h2>
-    <div class="links">
-      <a href="https://drive.google.com/file/d/197YxdGFEiFdMdMyOgxa53toa8gvi1wY7/view?usp=sharing">→ Resume</a>
-      <a href="Certifications.html">→ Certifications</a>
-      <a href="More about me.html">→ More about me</a>
+    <div class="background-blobs">
+        <img id="blob-image" src="blob-background.png" alt="Background Blobs">
     </div>
-  </div>
+    <div class="content">
+        <h1>Hey! I am Yash Ghone.</h1> 
+        <h2>Web Developer, SEO Analyst & Cyber Security Analyst</h2>
+        <div class="links">
+            <a href="https://drive.google.com/file/d/197YxdGFEiFdMdMyOgxa53toa8gvi1wY7/view?usp=sharing" target="_blank" rel="noopener noreferrer">→ Resume</a>
+            <a href="Certifications.html">→ Certifications</a>
+            <a href="More about me.html">→ More about me</a>
+        </div>
+    </div>
 
-  <script>
-    const blobImage = document.getElementById('blob-image');
-
-    document.addEventListener('mousemove', (e) => {
-      const centerX = window.innerWidth / 2;
-      const centerY = window.innerHeight / 2;
-      const mouseX = e.clientX;
-      const mouseY = e.clientY;
-
-      const deltaX = (mouseX - centerX) * 0.05;
-      const deltaY = (mouseY - centerY) * 0.05;
-
-      blobImage.style.transform = `scale(1.05) translate(${deltaX}px, ${deltaY}px)`;
-    });
-
-    document.addEventListener('mouseout', () => {
-      blobImage.style.transform = 'scale(1) translate(0, 0)';
-    });
-  </script>
-
+    <script>
+        const blobImage = document.getElementById('blob-image');
+        let isMobile = window.matchMedia("(max-width: 768px)").matches;
+        
+        // Function to handle blob movement
+        function handleBlobMovement(x, y) {
+            if (isMobile) return; // Don't move blob on mobile
+            
+            const centerX = window.innerWidth / 2;
+            const centerY = window.innerHeight / 2;
+            
+            const deltaX = (x - centerX) * 0.05;
+            const deltaY = (y - centerY) * 0.05;
+            
+            blobImage.style.transform = `scale(1.05) translate(${deltaX}px, ${deltaY}px)`;
+        }
+        
+        // Mouse movement for desktop
+        document.addEventListener('mousemove', (e) => {
+            handleBlobMovement(e.clientX, e.clientY);
+        });
+        
+        // Touch movement for mobile
+        document.addEventListener('touchmove', (e) => {
+            e.preventDefault();
+            const touch = e.touches[0];
+            handleBlobMovement(touch.clientX, touch.clientY);
+        }, { passive: false });
+        
+        // Reset blob position
+        function resetBlobPosition() {
+            blobImage.style.transform = 'scale(1) translate(0, 0)';
+        }
+        
+        document.addEventListener('mouseout', resetBlobPosition);
+        document.addEventListener('touchend', resetBlobPosition);
+        
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            isMobile = window.matchMedia("(max-width: 768px)").matches;
+            resetBlobPosition();
+        });
+        
+        // Prevent default touch behavior to avoid scrolling issues
+        document.addEventListener('touchstart', (e) => {
+            if (e.target.tagName !== 'A') {
+                e.preventDefault();
+            }
+        }, { passive: false });
+    </script>
 </body>
 </html>

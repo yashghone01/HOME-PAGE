@@ -3,37 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
+    <meta name="description" content="Contact page with email, LinkedIn, and WhatsApp links">
+    <meta name="theme-color" content="#D44638">
+    
+    <!-- Preload video -->
+    <link rel="preload" as="video" href="Contact Me.mp4" type="video/mp4">
+    
+    <!-- Font Awesome -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="Contact Me.css">
+    
+    <title>Contact Me | Yash Ghone</title>
 </head>
 <body>
-
-    <video autoplay muted loop id="background-video">
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline id="background-video">
         <source src="Contact Me.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
     </video>
 
-    <div class="content">
+    <main class="content">
         <h1 class="animated-text">Contact Me</h1>
-        <div class="contact-links">
-            <a href="mailto:yashghone2004@gmail.com" target="_blank">
-                <div class="contact-icon gmail">
-                    <i class="fas fa-envelope"></i>
-                </div>
+        
+        <nav class="contact-links" aria-label="Contact links">
+            <!-- Email Contact -->
+            <a href="mailto:yashghone2004@gmail.com" 
+               class="contact-icon gmail" 
+               aria-label="Send email"
+               rel="noopener">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
             </a>
-            <a href="https://www.linkedin.com/in/yash-ghone/" target="_blank">
-                <div class="contact-icon linkedin">
-                    <i class="fab fa-linkedin-in"></i>
-                </div>
-            </a>
-            <a href="https://wa.me/7744074415" target="_blank">
-                <div class="contact-icon whatsapp">
-                    <i class="fab fa-whatsapp"></i>
-                </div>
-            </a>
-        </div>
-    </div>
 
+            <!-- LinkedIn Contact -->
+            <a href="https://www.linkedin.com/in/yash-ghone/" 
+               class="contact-icon linkedin" 
+               aria-label="Visit LinkedIn profile"
+               target="_blank" 
+               rel="noopener noreferrer">
+                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+
+            <!-- WhatsApp Contact -->
+            <a href="https://wa.me/7744074415" 
+               class="contact-icon whatsapp" 
+               aria-label="Contact on WhatsApp"
+               target="_blank" 
+               rel="noopener noreferrer">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            </a>
+        </nav>
+    </main>
+
+    <!-- Optional: Add a noscript fallback for users with JavaScript disabled -->
+    <noscript>
+        <div style="text-align: center; padding: 20px;">
+            Please enable JavaScript to view this page properly.
+        </div>
+    </noscript>
 </body>
 </html>

@@ -2,27 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>YASH GHONE</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <div class="container">
+        <!-- Added mobile menu button -->
+        <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+            <i class="fas fa-bars"></i>
+        </button>
+
         <div class="content-wrapper">
             <div class="left-section">
                 <h1 class="name">YASH GHONE</h1>
                 <p class="description">
-                    Welcome to my comer of the web! I'm Yash Ghone, a web developer, SEO analyst & cyber security analyst on a mission to turn numbers
-into narratives. Explore my projects, insights, and joumey into the world of data right here!
+                    Welcome to my corner of the web! I'm Yash Ghone, a web developer, SEO analyst & cyber security analyst on a mission to turn numbers
+                    into narratives. Explore my projects, insights, and journey into the world of data right here!
                 </p>
                 <div class="social-icons">
-                    <a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQGOVX9I3rVrvgAAAZP5LGrQ_hbdPmR3eqdHBUAiZ5UibwHV1uQsoOL20s5O1T-gc2h_ka7F0HUwW59XIwj8jaefyRJvUzgLsFFnkc7WEiOE_eNVJtLZd6XgV5HqjcJjLnnQ2dk=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fyash-ghone" class="instagram"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/yashghone01/profilecard/?igsh=ODVwenI2N2dla2lu" class="instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://github.com/yashghone01" class="github"><i class="fab fa-github-square"></i></a>
+                    <a href="https://www.linkedin.com/in/yash-ghone" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/yashghone01" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       aria-label="Instagram Profile">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://github.com/yashghone01" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       aria-label="GitHub Profile">
+                        <i class="fab fa-github-square"></i>
+                    </a>
                 </div>
             </div>
-            <nav class="nav-menu">
+            <nav class="nav-menu" id="nav-menu">
                 <ul>
                     <li><a href="Portfolio.html">Portfolio</a></li>
                     <li><a href="Certifications.html">Certifications</a></li>
@@ -32,6 +52,58 @@ into narratives. Explore my projects, insights, and joumey into the world of dat
             </nav>
         </div>
     </div>
-    <script src="script.js"></script>
+
+    <!-- Added JavaScript for mobile menu functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navMenu = document.querySelector('#nav-menu');
+            const content = document.querySelector('.content-wrapper');
+            
+            // Initialize visibility
+            content.style.opacity = '1';
+            
+            // Toggle mobile menu
+            mobileMenuBtn.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                mobileMenuBtn.classList.toggle('active');
+                // Toggle icon between bars and times
+                const icon = mobileMenuBtn.querySelector('i');
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const isClickInsideMenu = navMenu.contains(event.target);
+                const isClickOnMenuBtn = mobileMenuBtn.contains(event.target);
+                
+                if (!isClickInsideMenu && !isClickOnMenuBtn && navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    mobileMenuBtn.classList.remove('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            // Close menu when clicking on a link
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    mobileMenuBtn.classList.remove('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
