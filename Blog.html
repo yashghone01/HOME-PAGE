@@ -3,42 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Blog</title>
+    <meta name="description" content="Personal blog featuring articles on ethical hacking, web development, and SEO">
+    <meta name="theme-color" content="#007bff">
+    
+    <!-- Preload video for better performance -->
+    <link rel="preload" as="video" href="Blog.mp4" type="video/mp4">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Livvic&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Blog.css"> </head>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="Blog.css">
+    
+    <title>Portfolio - Blog</title>
+</head>
 <body>
-    <video autoplay muted loop id="background-video">
+    <!-- Video Background with Fallback -->
+    <video autoplay muted loop playsinline id="background-video">
         <source src="Blog.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
     </video>
+
     <h1>My Blog</h1>
+
     <div class="blog-container">
-        <div class="blog-post">
+        <!-- Ethical Hacking Blog Post -->
+        <article class="blog-post">
             <h2 class="blog-title">Understanding the Basics of Ethical Hacking</h2>
             <p>Ethical hacking, also known as white-hat hacking, is the practice of probing systems, networks, and applications to identify vulnerabilities—legally and with permission. Unlike malicious hackers, ethical hackers strengthen security and protect sensitive data....</p>
-            <a href="https://yashghone.blogspot.com/2024/12/understanding-basics-of-ethical-hacking.html" class="read-more">Read More</a>
+            <a href="https://yashghone.blogspot.com/2024/12/understanding-basics-of-ethical-hacking.html" class="read-more" target="_blank" rel="noopener noreferrer">Read More</a>
             <div id="ethical-hacking-content" class="blog-post-content">
             </div>
-        </div>
+        </article>
 
-        <div class="blog-post">
+        <!-- Responsive Web Design Blog Post -->
+        <article class="blog-post">
             <h2 class="blog-title">Building a Responsive Website: Best Practices</h2>
             <p>In today's mobile-first world, responsive web design is essential to ensure your website looks great on devices of all sizes. Here's how to build a responsive website that enhances user experience....</p>
-            <a href="https://yashghone.blogspot.com/2024/12/building-responsive-website-best.html" class="read-more">Read More</a>
+            <a href="https://yashghone.blogspot.com/2024/12/building-responsive-website-best.html" class="read-more" target="_blank" rel="noopener noreferrer">Read More</a>
             <div id="responsive-web-content" class="blog-post-content">
             </div>
-        </div>
+        </article>
 
-        <div class="blog-post">
+        <!-- SEO Strategies Blog Post -->
+        <article class="blog-post">
             <h2 class="blog-title">SEO Strategies for Beginners: Tips from My Internship Journey</h2>
-            <p>During my internship, I learned that SEO isn’t just about rankings—it's about creating meaningful, discoverable content. Here are beginner-friendly strategies I found effective...</p>
-            <a href="https://yashghone.blogspot.com/2024/12/seo-strategies-for-beginners-tips-from.html" class="read-more">Read More</a>
+            <p>During my internship, I learned that SEO isn't just about rankings—it's about creating meaningful, discoverable content. Here are beginner-friendly strategies I found effective...</p>
+            <a href="https://yashghone.blogspot.com/2024/12/seo-strategies-for-beginners-tips-from.html" class="read-more" target="_blank" rel="noopener noreferrer">Read More</a>
             <div id="seo-strategies-content" class="blog-post-content">
             </div>
-        </div>
+        </article>
     </div>
-
 </body>
 </html>
