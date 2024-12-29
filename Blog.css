@@ -1,0 +1,85 @@
+body {
+    font-family: 'League Spartan', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    overflow-x: hidden;
+    cursor: default;
+}
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.blog-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+.blog-post {
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    min-height: 300px;
+    transition: transform 0.2s;
+}
+.blog-post:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 900px) {
+    .blog-post {
+        width: 45%;
+    }
+}
+@media (max-width: 600px) {
+    .blog-post {
+        width: 90%;
+    }
+}
+.blog-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.read-more, .back-to-top {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+.read-more:hover, .back-to-top:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.blog-post-content {
+    display: none;
+    margin-top: 20px;
+}
+.blog-post-content:target {
+    display: block;
+}
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: 'Livvic', sans-serif;
+}
+ul, ol {
+    padding-left: 20px;
+}
